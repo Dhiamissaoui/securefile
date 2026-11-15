@@ -44,7 +44,10 @@ function CheckRow({ icon: Icon, title, check, children }) {
         <p>{check.message}</p>
         {children}
       </div>
-      <StatusChip tone={ok ? 'mint' : 'rose'} icon={ok ? CheckCircle2 : XCircle}>
+      <StatusChip
+        tone={ok ? 'mint' : check.present === false ? 'neutral' : 'rose'}
+        icon={ok ? CheckCircle2 : check.present === false ? undefined : XCircle}
+      >
         {ok ? 'Vérifié' : check.present === false ? 'Absent' : 'Échec'}
       </StatusChip>
     </li>
