@@ -1,0 +1,9 @@
+node_modules/
+dist/
+.env
+.env.local
+backend/pki/ca.key*
+backend/storage/encrypted/*
+!backend/storage/encrypted/.gitkeep
+*.log
+.DS_Store
